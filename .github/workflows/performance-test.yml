@@ -16,6 +16,10 @@ on:
         description: 'Browser type (chrome / firefox)'
         required: true
         default: 'chrome'
+      enable_graphite:
+        description: 'Send metrics to Graphite? (true / false)'
+        required: false
+        default: 'false'
 
 jobs:
   performance-test:
@@ -39,11 +43,9 @@ jobs:
       - name: Run sitespeed.io Container
         run: |
           GRAPHITE_ARGS=""
-          HOST="${{ secrets.GRAPHITE_HOST }}"
-          if [ -n "$HOST" ] && [ "$HOST" != "127.0.0.1" ] && [ "$HOST" != "localhost" ] && [ "$HOST" != "dummy.com" ]; then
-            GRAPHITE_ARGS="--graphite.host $HOST --graphite.port ${{ secrets.GRAPHITE_PORT || '2003' }} --graphite.namespace sitespeed_io.ci"
+          if [ "${{ github.event.inputs.enable_graphite }}" = "true" ] && [ -n "${{ secrets.GRAPHITE_HOST }}" ]; then
+            GRAPHITE_ARGS="--graphite.host ${{ secrets.GRAPHITE_HOST }} --graphite.port ${{ secrets.GRAPHITE_PORT || '2003' }} --graphite.namespace sitespeed_io.ci"
           fi
-
 
           docker run --rm \
             -v ${{ github.workspace }}:/sitespeed.io \
@@ -53,6 +55,7 @@ jobs:
             -n ${{ steps.metadata.outputs.iterations }} \
             --outputFolder sitespeed-result \
             $GRAPHITE_ARGS
+
 
 
       - name: Upload HTML Report as Artifact
