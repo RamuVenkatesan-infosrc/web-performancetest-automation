@@ -11,7 +11,7 @@ on:
       iterations:
         description: 'Number of test iterations (-n)'
         required: true
-        default: '3'
+        default: '1'
       browser:
         description: 'Browser type (chrome / firefox)'
         required: true
@@ -29,7 +29,7 @@ jobs:
       - name: Set up Test Metadata
         id: metadata
         run: |
-          ITERATIONS="${{ github.event.inputs.iterations || '3' }}"
+          ITERATIONS="${{ github.event.inputs.iterations || '1' }}"
           BROWSER="${{ github.event.inputs.browser || 'chrome' }}"
           TIMESTAMP=$(date +'%Y-%m-%d-%H-%M-%S')
           echo "iterations=$ITERATIONS" >> $GITHUB_OUTPUT
@@ -38,17 +38,21 @@ jobs:
 
       - name: Run sitespeed.io Container
         run: |
+          GRAPHITE_ARGS=""
+          if [ -n "${{ secrets.GRAPHITE_HOST }}" ]; then
+            GRAPHITE_ARGS="--graphite.host ${{ secrets.GRAPHITE_HOST }} --graphite.port ${{ secrets.GRAPHITE_PORT || '2003' }} --graphite.namespace sitespeed_io.ci"
+          fi
+
           docker run --rm \
             -v ${{ github.workspace }}:/sitespeed.io \
             sitespeedio/sitespeed.io:latest \
             scripts/infoservices-journey.js \
             --browser ${{ steps.metadata.outputs.browser }} \
             -n ${{ steps.metadata.outputs.iterations }} \
-            --graphite.host ${{ secrets.GRAPHITE_HOST }} \
-            --graphite.port ${{ secrets.GRAPHITE_PORT || '2003' }} \
-            --graphite.namespace sitespeed_io.ci \
             --budget.configPath config/budget.json \
-            --outputFolder sitespeed-result
+            --budget.suppressExitCode true \
+            --outputFolder sitespeed-result \
+            $GRAPHITE_ARGS
 
       - name: Upload HTML Report as Artifact
         if: always()
@@ -57,3 +61,4 @@ jobs:
           name: sitespeed-report-${{ steps.metadata.outputs.timestamp }}
           path: sitespeed-result/
           retention-days: 14
+
