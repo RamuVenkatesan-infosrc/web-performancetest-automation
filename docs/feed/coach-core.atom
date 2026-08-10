@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>coach-core-release-feed</id>
+    <title>coach-core release feed</title>
+    <updated>2026-07-29T05:05:47.850Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>Peter Hedenskog</name>
+        <email>peter@soulgalore.com</email>
+        <uri>https://www.peterhedenskog.com</uri>
+    </author>
+    <link rel="alternate" href="https://www.sitespeed.io"/>
+    <link rel="self" href="https://www.sitespeed.io/feed/coach-core.atom"/>
+    <subtitle>New releases and changelog feed of coach-core</subtitle>
+    <logo>https://www.sitespeed.io/img/logos/coach.png</logo>
+    <icon>http://www.sitespeed.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, Peter Hedenskog and team</rights>
+    <category term="Web Performance"/>
+    <entry>
+        <title type="html"><![CDATA[coach-core 7.0.0]]></title>
+        <id>https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#7.0.0</id>
+        <link href="https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#7.0.0"/>
+        <link rel="enclosure" href="https://www.sitespeed.io/img/logos/coach.png" type="image/png"/>
+        <updated>2021-12-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Added</strong><br>
+- Updated to use latest Coach core and Browertime.<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[coach-core 6.4.3]]></title>
+        <id>https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#6.4.3</id>
+        <link href="https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#6.4.3"/>
+        <link rel="enclosure" href="https://www.sitespeed.io/img/logos/coach.png" type="image/png"/>
+        <updated>2021-10-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Added</strong><br>
+- Updated to use latest Browsertime with latest Chromedriver<br>
+- Updated Docker container to use latest Chrome/Firefox<br>
+- Use Browsertime 11.0.0<br>
+- Use Coach-code 6.0<br>
+- Use latest Firefox and Chrome<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[coach-core 5.0.0]]></title>
+        <id>https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#5.0.0</id>
+        <link href="https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#5.0.0"/>
+        <link rel="enclosure" href="https://www.sitespeed.io/img/logos/coach.png" type="image/png"/>
+        <updated>2020-03-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Changed</strong><br>
+- We moved out the core functionality to coach-core. This makes it easy to use the Coach in your own code.<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[coach-core 4.5.0]]></title>
+        <id>https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#4.5.0</id>
+        <link href="https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#4.5.0"/>
+        <link rel="enclosure" href="https://www.sitespeed.io/img/logos/coach.png" type="image/png"/>
+        <updated>2020-02-20T00:00:00.000Z</updated>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[coach-core 4.4.1]]></title>
+        <id>https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#4.4.1</id>
+        <link href="https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#4.4.1"/>
+        <link rel="enclosure" href="https://www.sitespeed.io/img/logos/coach.png" type="image/png"/>
+        <updated>2020-02-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Fixed</strong><br>
+- Upgraded to Browsertime 8.0.1<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[coach-core 4.4.0]]></title>
+        <id>https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#4.4.0</id>
+        <link href="https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#4.4.0"/>
+        <link rel="enclosure" href="https://www.sitespeed.io/img/logos/coach.png" type="image/png"/>
+        <updated>2020-02-05T00:00:00.000Z</updated>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[coach-core 4.3.1]]></title>
+        <id>https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#4.3.1</id>
+        <link href="https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#4.3.1"/>
+        <link rel="enclosure" href="https://www.sitespeed.io/img/logos/coach.png" type="image/png"/>
+        <updated>2020-01-10T00:00:00.000Z</updated>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[coach-core 4.3.0]]></title>
+        <id>https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#4.3.0</id>
+        <link href="https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#4.3.0"/>
+        <link rel="enclosure" href="https://www.sitespeed.io/img/logos/coach.png" type="image/png"/>
+        <updated>2019-12-12T00:00:00.000Z</updated>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[coach-core 4.2.0]]></title>
+        <id>https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#4.2.0</id>
+        <link href="https://github.com/sitespeedio/coach-core/blob/main/CHANGELOG.md#4.2.0"/>
+        <link rel="enclosure" href="https://www.sitespeed.io/img/logos/coach.png" type="image/png"/>
+        <updated>2019-11-02T00:00:00.000Z</updated>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+</feed>

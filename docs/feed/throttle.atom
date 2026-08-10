@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>throttle-release-feed</id>
+    <title>throttle release feed</title>
+    <updated>2026-07-29T05:05:47.850Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>Peter Hedenskog</name>
+        <email>peter@soulgalore.com</email>
+        <uri>https://www.peterhedenskog.com</uri>
+    </author>
+    <link rel="alternate" href="https://www.sitespeed.io"/>
+    <link rel="self" href="https://www.sitespeed.io/feed/throttle.atom"/>
+    <subtitle>New releases and changelog feed of throttle</subtitle>
+    <icon>http://www.sitespeed.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, Peter Hedenskog and team</rights>
+    <category term="Web Performance"/>
+    <entry>
+        <title type="html"><![CDATA[throttle 6.0.1]]></title>
+        <id>https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#6.0.1</id>
+        <link href="https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#6.0.1"/>
+        <updated>2026-07-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Fixed</strong><br>
+- Make throttle work on GitHub Actions again: Linux throttling no longer fails with &quot;Exclusivity flag on, cannot modify&quot; when another tool already holds the ingress qdisc slot on the interface. GitHub-hosted Actions runners now come with an eBPF network-monitoring agent that attaches a clsact qdisc to the default interface (other eBPF-based security agents do the same), and since only one ingress/clsact qdisc can exist per device, throttle&#39;s <code>tc qdisc add ... ingress</code> failed and took the whole measurement run down with it. The original code path is unchanged and runs first; only when it fails does throttle fall back to attaching its redirect filters to the existing qdisc (on the clsact ingress hook when needed), with explicit filter priorities so stop removes exactly its own filters and leaves the other tool&#39;s qdisc and filters untouched. #108.<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[throttle 6.0.0]]></title>
+        <id>https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#6.0.0</id>
+        <link href="https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#6.0.0"/>
+        <updated>2026-03-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Added</strong><br>
+- Added IPv6 throttling support on macOS #94 and Linux #100.<br>
+- Apply packet loss also to the upload interface #69.<br>
+<br>
+<strong>Fixed</strong><br>
+- More robust detection of the default network interface on Linux, falling back to global IP address lookup when the default route is unavailable #104.<br>
+- Fixed README profile values for DSL and Edge to match actual code, and fixed Node.js API examples to use named imports.<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[throttle 5.0.1]]></title>
+        <id>https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#5.0.1</id>
+        <link href="https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#5.0.1"/>
+        <updated>2024-08-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Fixed</strong><br>
+- Smarter ifb0 handling on Linux #93.<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[throttle 5.0.0]]></title>
+        <id>https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#5.0.0</id>
+        <link href="https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#5.0.0"/>
+        <updated>2022-07-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Changed</strong><br>
+- Dropped support for NodeJS 12 since it&#39;s unmaintaned.<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[throttle 4.0.3]]></title>
+        <id>https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#4.0.3</id>
+        <link href="https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#4.0.3"/>
+        <updated>2022-06-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Fixed</strong><br>
+- Fixed <code>--version</code> so it actually shows the version again #75.<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[throttle 4.0.2]]></title>
+        <id>https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#4.0.2</id>
+        <link href="https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#4.0.2"/>
+        <updated>2022-06-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Fixed</strong><br>
+- The E6 Module convertion in 4.0 broke version check (<code>--version</code>) making installs failed. PR #74 is a temporaty fix for that.<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[throttle 4.0.1]]></title>
+        <id>https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#4.0.1</id>
+        <link href="https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#4.0.1"/>
+        <updated>2022-06-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Fixed</strong><br>
+- Removed the dependecy of route. Using <code>ip route</code> instead and we already have <code>ip</code> as a requirement.<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[throttle 4.0.0]]></title>
+        <id>https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#4.0.0</id>
+        <link href="https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#4.0.0"/>
+        <updated>2022-04-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Fixed</strong><br>
+- Updated dev dependencies to latest versions #68<br>
+<br>
+<strong>Changed</strong><br>
+- Converting the project to ES6 module. If you run Throttle by command line it will work exactly as before except that we dropped support for NodeJS 10 #67. You can read Sindre Sorhus ESM package guide.<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[throttle 3.1.1]]></title>
+        <id>https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#3.1.1</id>
+        <link href="https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#3.1.1"/>
+        <updated>2022-04-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Fixed</strong><br>
+- Updated minimist dependency.<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[throttle 3.1.0]]></title>
+        <id>https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#3.1.0</id>
+        <link href="https://github.com/sitespeedio/throttle/blob/main/CHANGELOG.md#3.1.0"/>
+        <updated>2021-12-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<strong>Added</strong><br>
+- Add support for setting packet loss. Add <code>--packetLoss</code> and set the loss in percentage.<br>
+]]></summary>
+        <author>
+            <name>Sitespeed.io</name>
+            <uri>https://www.sitespeed.io</uri>
+        </author>
+    </entry>
+</feed>

@@ -1,0 +1,2 @@
+return document.readyState === 'complete';
+

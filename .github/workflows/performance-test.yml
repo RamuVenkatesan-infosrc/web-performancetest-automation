@@ -1,0 +1,59 @@
+name: Web Performance Test (sitespeed.io)
+
+on:
+  # 1. Scheduled run (Every day at 02:00 AM UTC)
+  schedule:
+    - cron: '0 2 * * *'
+
+  # 2. Manual trigger via GitHub UI
+  workflow_dispatch:
+    inputs:
+      iterations:
+        description: 'Number of test iterations (-n)'
+        required: true
+        default: '3'
+      browser:
+        description: 'Browser type (chrome / firefox)'
+        required: true
+        default: 'chrome'
+
+jobs:
+  performance-test:
+    name: Run sitespeed.io User Journey Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      - name: Set up Test Metadata
+        id: metadata
+        run: |
+          ITERATIONS="${{ github.event.inputs.iterations || '3' }}"
+          BROWSER="${{ github.event.inputs.browser || 'chrome' }}"
+          TIMESTAMP=$(date +'%Y-%m-%d-%H-%M-%S')
+          echo "iterations=$ITERATIONS" >> $GITHUB_OUTPUT
+          echo "browser=$BROWSER" >> $GITHUB_OUTPUT
+          echo "timestamp=$TIMESTAMP" >> $GITHUB_OUTPUT
+
+      - name: Run sitespeed.io Container
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/sitespeed.io \
+            sitespeedio/sitespeed.io:latest \
+            scripts/infoservices-journey.js \
+            --browser ${{ steps.metadata.outputs.browser }} \
+            -n ${{ steps.metadata.outputs.iterations }} \
+            --graphite.host ${{ secrets.GRAPHITE_HOST }} \
+            --graphite.port ${{ secrets.GRAPHITE_PORT || '2003' }} \
+            --graphite.namespace sitespeed_io.ci \
+            --budget.configPath config/budget.json \
+            --outputFolder sitespeed-result
+
+      - name: Upload HTML Report as Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sitespeed-report-${{ steps.metadata.outputs.timestamp }}
+          path: sitespeed-result/
+          retention-days: 14

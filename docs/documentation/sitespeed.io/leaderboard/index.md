@@ -1,0 +1,69 @@
+---
+layout: default
+title: Performance Leaderboard
+description: Set up your own web performance leaderboard.
+keywords: dashboard, leaderboard, documentation, web performance, sitespeed.io
+nav: documentation
+category: sitespeed.io
+image: https://www.sitespeed.io/img/sitespeed-2.0-twitter.png
+twitterdescription: The web performance leaderboard.
+---
+
+[Documentation]({{site.baseurl}}/documentation/sitespeed.io/) / Performance Leaderboard
+
+# Performance Leaderboard
+{:.no_toc}
+
+{:toc}
+
+The [leaderboard dashboard](https://dashboard.sitespeed.io/d/000000060/leaderboard) is the easiest way to compare how you are doing against your competition. To get it going you need [Grafana](https://grafana.com) (6.2 or later) and Graphite. If you don't have that already, you can follow the instructions in [performance dashboard documentation](/documentation/sitespeed.io/performance-dashboard/#using-docker-compose). And to run your tests, you should follow [our example](https://github.com/sitespeedio/dashboard.sitespeed.io).
+
+The dashboard lists the pages that you test, with the fastest/best URL first (yes, it is a leaderboard!). It looks like this:
+![Leaderboard example]({{site.baseurl}}/img/leaderboard-example.png)
+{: .img-thumbnail}
+
+But you really should try out our demo at [dashboard.sitespeed.io](https://dashboard.sitespeed.io/d/000000060/leaderboard) to really get a feel for it. The dashboard is generic and will work out of the box. But you can also modify it!
+
+The current version compares visual metrics, how the page is built, CPU time spent metrics, and how many 3rd parties are used.
+
+You can (and should) of course edit/change your own version of the dashboard:
+* You can configure the red/yellow/green limits for each dashboard
+* You can remove/add your own dashboards
+* You can make each dashboard larger/smaller depending on how many URLs you want to test
+
+If you use Chrome to test your URLs you can see things like how many and how long CPU long tasks each page uses:
+
+![CPU Long tasks leaderboard]({{site.baseurl}}/img/long-task-leaderboard.png)
+{: .img-thumbnail}
+
+
+Or you can compare Coach performance and privacy scores:
+
+![Score leaderboard]({{site.baseurl}}/img/score-leaderboard.png)
+{: .img-thumbnail}
+
+
+The easiest way is to create a text file with the URLs you want to compare and then push the tests under the same Graphite namespace (`--graphite.namespace`). Then you automatically compare all the URLs. Here's what it looks like for one of our tests:
+
+```
+https://www.google.com/
+https://www.youtube.com/
+https://www.facebook.com/
+https://www.baidu.com/
+https://en.wikipedia.org/wiki/Main_Page
+https://en.wikipedia.org/wiki/Barack_Obama
+http://xw.qq.com/
+https://world.taobao.com/
+https://www.tmall.com/
+https://us.yahoo.com/
+https://www.amazon.com/
+```
+
+And then we just use the namespace **alexaDesktop**. 
+
+And one more thing: you can also combine namespaces and compare multiple tests by using the namespace path: 
+
+![Score leaderboard]({{site.baseurl}}/img/combine-namespaces.png)
+{: .img-thumbnail-center}
+
+If you have any problem with the dashboard, let us know in a [GitHub issue](https://github.com/sitespeedio/sitespeed.io/issues/new)!

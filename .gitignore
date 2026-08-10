@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+*.log
+*.iml
+.vscode
+sitespeed-result
+configs
+docs/_site
+docs/.cache
+yarn.lock
+.tern-projectGemfile.lock

@@ -1,0 +1,235 @@
+/*
+ * Top navigation — brand-blue header bar, dropdown for the
+ * Documentation submenu on desktop, hamburger reveal on phones.
+ * Mobile menu uses a hidden checkbox + sibling selector so it works
+ * without any JavaScript.
+ */
+
+body {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  word-wrap: break-word;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*
+ * Top nav as a "card top" — same treatment the result pages use.
+ * Sits inside a max-width container with rounded top corners and a
+ * small gap to the body background so the page reads as a panel.
+ */
+.nav {
+  max-width: var(--container-max);
+  margin: 16px auto 0 auto;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  background: var(--color-brand);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav .grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 6px 4px 6px 0;
+  flex: 0 0 auto;
+}
+
+.logo a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  height: 52px;
+  width: auto;
+  max-width: 240px;
+}
+
+/* hamburger — hidden on desktop, revealed below 768px */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  margin-left: auto;
+  padding: 14px 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  position: relative;
+  transition: transform 0.18s ease;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle-label span::before { top: -7px; }
+.nav-toggle-label span::after  { top:  7px; }
+
+/* primary nav list — stretch every item to the full nav height so the
+ * hover/active background fills top-to-bottom (no white gap above or
+ * below). Rounded TOP corners on the highlight match the result-page
+ * "tab" pattern. */
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+.nav li {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background-color 0.12s ease;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.nav ul a:hover,
+.nav ul a:focus-visible,
+.nav li:hover > a,
+.nav li:focus-within > a {
+  background-color: var(--color-brand-deep);
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+
+.nav a.active {
+  background-color: var(--color-brand-deep);
+  color: #fff;
+}
+
+/* submenu — appears under Documentation on hover/focus. Width sized
+ * to its content so it never extends past the parent link's right
+ * edge (the parent text is currently the widest item). */
+.nav li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  min-width: 100%;
+  display: none;
+  flex-direction: column;
+  background: var(--color-brand-deep);
+  box-shadow: var(--shadow-md);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  padding: 4px 0;
+  z-index: 60;
+}
+
+.nav li:hover > ul,
+.nav li:focus-within > ul {
+  display: flex;
+}
+
+.nav li ul li {
+  width: 100%;
+}
+
+.nav li ul a {
+  padding: 12px 18px;
+  font-size: 1.1rem;
+  border-radius: 0;
+}
+
+.nav li ul a:hover,
+.nav li ul a:focus-visible {
+  background-color: rgba(0, 0, 0, 0.18);
+}
+
+/*
+ * Mobile — hamburger + stacked menu. The hidden checkbox sibling-
+ * selector pattern lets the toggle work without JS.
+ */
+@media (max-width: 767px) {
+  .nav .grid {
+    padding: 0 16px;
+  }
+
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .nav ul {
+    flex: 1 0 100%;
+    flex-direction: column;
+    align-items: stretch;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+    background: var(--color-brand);
+  }
+
+  .nav-toggle:checked ~ ul {
+    max-height: 800px;
+  }
+
+  .nav li {
+    display: block;
+  }
+
+  .nav a {
+    padding: 12px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0;
+  }
+
+  .nav li ul {
+    position: static;
+    display: flex;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.18);
+  }
+
+  .nav li ul a {
+    padding-left: 32px;
+  }
+}
+
+/* Anchor offset so #foo links don't disappear under the sticky nav */
+:target {
+  scroll-margin-top: 70px;
+}
