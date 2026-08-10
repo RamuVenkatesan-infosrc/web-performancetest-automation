@@ -39,9 +39,11 @@ jobs:
       - name: Run sitespeed.io Container
         run: |
           GRAPHITE_ARGS=""
-          if [ -n "${{ secrets.GRAPHITE_HOST }}" ]; then
-            GRAPHITE_ARGS="--graphite.host ${{ secrets.GRAPHITE_HOST }} --graphite.port ${{ secrets.GRAPHITE_PORT || '2003' }} --graphite.namespace sitespeed_io.ci"
+          HOST="${{ secrets.GRAPHITE_HOST }}"
+          if [ -n "$HOST" ] && [ "$HOST" != "127.0.0.1" ] && [ "$HOST" != "localhost" ] && [ "$HOST" != "dummy.com" ]; then
+            GRAPHITE_ARGS="--graphite.host $HOST --graphite.port ${{ secrets.GRAPHITE_PORT || '2003' }} --graphite.namespace sitespeed_io.ci"
           fi
+
 
           docker run --rm \
             -v ${{ github.workspace }}:/sitespeed.io \
