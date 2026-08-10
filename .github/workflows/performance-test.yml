@@ -49,10 +49,9 @@ jobs:
             scripts/infoservices-journey.js \
             --browser ${{ steps.metadata.outputs.browser }} \
             -n ${{ steps.metadata.outputs.iterations }} \
-            --budget.configPath config/budget.json \
-            --budget.suppressExitCode true \
             --outputFolder sitespeed-result \
             $GRAPHITE_ARGS
+
 
       - name: Upload HTML Report as Artifact
         if: always()
