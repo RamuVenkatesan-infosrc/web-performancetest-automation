@@ -21,10 +21,25 @@ on:
         required: false
         default: ''
 
+# Sets permissions for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
 jobs:
   performance-test:
-    name: Run sitespeed.io User Journey Tests
+    name: Run sitespeed.io User Journey Tests & Deploy Report
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout Repository Code
@@ -33,14 +48,12 @@ jobs:
       - name: Parse Test Configuration
         id: config
         run: |
-          # Read values from config.json with fallbacks
           CONF_BROWSER=$(jq -r '.browser // "chrome"' config.json)
           CONF_ITERATIONS=$(jq -r '.iterations // 1' config.json)
           CONF_SCRIPT=$(jq -r '.script // "scripts/infoservices-journey.js"' config.json)
           CONF_OUTPUT=$(jq -r '.outputFolder // "results"' config.json)
           CONF_GRAPHITE=$(jq -r '.enable_graphite // false' config.json)
 
-          # Manual UI inputs override config.json if provided
           BROWSER="${{ github.event.inputs.browser }}"
           if [ -z "$BROWSER" ]; then
             BROWSER="$CONF_BROWSER"
@@ -60,13 +73,6 @@ jobs:
           echo "output_dir=$RUN_OUTPUT_DIR" >> $GITHUB_OUTPUT
           echo "enable_graphite=$CONF_GRAPHITE" >> $GITHUB_OUTPUT
           echo "timestamp=$TIMESTAMP" >> $GITHUB_OUTPUT
-
-          echo "Configuration Loaded:"
-          echo "  Browser    : $BROWSER"
-          echo "  Iterations : $ITERATIONS"
-          echo "  Script     : $CONF_SCRIPT"
-          echo "  Output Dir : $RUN_OUTPUT_DIR"
-          echo "  Graphite   : $CONF_GRAPHITE"
 
       - name: Run sitespeed.io Container
         run: |
@@ -91,3 +97,19 @@ jobs:
           name: sitespeed-report-${{ steps.config.outputs.timestamp }}
           path: ${{ steps.config.outputs.output_dir }}/
           retention-days: 14
+
+      # GitHub Pages Deployment Steps
+      - name: Setup Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@v5
+
+      - name: Upload Artifact for GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ steps.config.outputs.output_dir }}/
+
+      - name: Deploy Live HTML Report to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        id: deployment
+        uses: actions/deploy-pages@v4
