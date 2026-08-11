@@ -1,11 +1,9 @@
-.DS_Store
-node_modules
+# Output Directories
+sitespeed-result/
 *.log
-*.iml
-.vscode
-sitespeed-result
-configs
-docs/_site
-docs/.cache
-yarn.lock
-.tern-projectGemfile.lock
+
+# OS & Environment
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
