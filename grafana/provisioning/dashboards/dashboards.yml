@@ -1,0 +1,10 @@
+apiVersion: 1
+providers:
+  - name: sitespeedio
+    orgId: 1
+    folder: sitespeed.io
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /etc/grafana/provisioning/dashboards
