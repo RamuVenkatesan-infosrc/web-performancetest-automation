@@ -873,7 +873,7 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<a href=\"$resulturl/$base.$path.$group.$page.$browser.$connectivity.$screenshottype\">\n<img src=\"$resulturl/$base.$path.$group.$page.$browser.$connectivity.$screenshottype\" style=\"width:100%\"></a>",
+        "content": "<a href=\"$resulturl/data/pages/$domain/$page/1/afterPageCompleteCheck.png\">\n<img src=\"$resulturl/data/pages/$domain/$page/1/afterPageCompleteCheck.png\" style=\"width:100%\"></a>",
         "mode": "html"
       },
       "pluginVersion": "10.0.1",
@@ -913,7 +913,8 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<video controls width=\"100%\" src=\"$resulturl/$base.$path.$group.$page.$browser.$connectivity.mp4\"></video>\n",
+        "content": "<video controls width=\"100%\" src=\"$resulturl/data/pages/$domain/$page/1/images/1.mp4\"></video>\n",
+
 
         "mode": "html"
       },
