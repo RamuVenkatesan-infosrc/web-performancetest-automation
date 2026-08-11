@@ -341,7 +341,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "alias(sitespeed_io.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.FirstVisualChange.median, 'Median')"
+              "target": "alias(sitespeed_io.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.FirstVisualChange.median, 'Median')"
             }
           ],
           "title": "First visual change",
@@ -468,7 +468,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "alias(sitespeed_io.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.largestContentfulPaint.median, 'Median')"
+              "target": "alias(sitespeed_io.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.largestContentfulPaint.median, 'Median')"
             }
           ],
           "title": "Largest Contentful Paint",
@@ -595,7 +595,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "alias(sitespeed_io.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.ttfb.median, 'Median')"
+              "target": "alias(sitespeed_io.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.ttfb.median, 'Median')"
             }
           ],
           "title": "Time to first byte",
@@ -722,7 +722,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "alias(sitespeed_io.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.browser.cpuBenchmark.median, 'Median')"
+              "target": "alias(sitespeed_io.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.browser.cpuBenchmark.median, 'Median')"
             }
           ],
           "title": "CPU benchmark",
@@ -1061,7 +1061,7 @@
           },
           "refCount": 0,
           "refId": "G",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.ttfb.$function, 'TTFB')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.ttfb.$function, 'TTFB')",
           "textEditor": false
         },
         {
@@ -1071,7 +1071,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.FirstVisualChange.$function, 11)",
+          "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.FirstVisualChange.$function, 11)",
           "textEditor": false
         },
         {
@@ -1081,7 +1081,7 @@
           },
           "refCount": 0,
           "refId": "B",
-          "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.Heading.$function, 11)",
+          "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.Heading.$function, 11)",
           "textEditor": false
         },
         {
@@ -1091,7 +1091,7 @@
           },
           "refCount": 0,
           "refId": "C",
-          "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.LargestImage.$function, 11)",
+          "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.LargestImage.$function, 11)",
           "textEditor": false
         },
         {
@@ -1101,7 +1101,7 @@
           },
           "refCount": 0,
           "refId": "E",
-          "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.LastVisualChange.$function, 11)",
+          "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.LastVisualChange.$function, 11)",
           "textEditor": false
         },
         {
@@ -1111,7 +1111,7 @@
           },
           "refCount": 0,
           "refId": "D",
-          "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.SpeedIndex.$function, 11)",
+          "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.SpeedIndex.$function, 11)",
           "textEditor": false
         },
         {
@@ -1121,7 +1121,7 @@
           },
           "refCount": 0,
           "refId": "F",
-          "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.LargestContentfulPaint.$function, 11)",
+          "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.LargestContentfulPaint.$function, 11)",
           "textEditor": false
         },
         {
@@ -1131,7 +1131,7 @@
           },
           "refCount": 0,
           "refId": "H",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.fullyLoaded.$function, 'Fully Loaded')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.fullyLoaded.$function, 'Fully Loaded')",
           "textEditor": false
         },
         {
@@ -1142,7 +1142,7 @@
           "hide": false,
           "refCount": 0,
           "refId": "I",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.lastLongTask.$function, 'Last CPU long task')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.lastLongTask.$function, 'Last CPU long task')",
           "textEditor": false
         }
       ],
@@ -1226,7 +1226,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.transferSize, 'Total Transfer Size')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.transferSize, 'Total Transfer Size')",
           "textEditor": true
         }
       ],
@@ -1308,7 +1308,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.requests, 'Requests')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.requests, 'Requests')",
           "textEditor": false
         }
       ],
@@ -1390,7 +1390,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.domElements, 'DOM Elements')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.domElements, 'DOM Elements')",
           "textEditor": true
         }
       ],
@@ -1508,7 +1508,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.paintTiming.first-contentful-paint.$function, 'First Contentful Paint')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.paintTiming.first-contentful-paint.$function, 'First Contentful Paint')",
           "textEditor": false
         }
       ],
@@ -1590,7 +1590,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.largestContentfulPaint.renderTime.$function, 'Largest Contentful Paint')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.largestContentfulPaint.renderTime.$function, 'Largest Contentful Paint')",
           "textEditor": false
         }
       ],
@@ -1672,7 +1672,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.pageinfo.cumulativeLayoutShift.$function, 'Cumulative Layout Shift')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.pageinfo.cumulativeLayoutShift.$function, 'Cumulative Layout Shift')",
           "textEditor": false
         }
       ],
@@ -1754,7 +1754,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.totalBlockingTime.$function, 'Total Blocking Time')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.totalBlockingTime.$function, 'Total Blocking Time')",
           "textEditor": false
         }
       ],
@@ -1872,7 +1872,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.FirstVisualChange.$function, 'First Visual Change')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.FirstVisualChange.$function, 'First Visual Change')",
           "textEditor": false
         }
       ],
@@ -1954,7 +1954,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.Heading.$function, 'Largest Heading')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.Heading.$function, 'Largest Heading')",
           "textEditor": false
         }
       ],
@@ -2036,7 +2036,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.LargestImage.$function, 'Largest Image')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.LargestImage.$function, 'Largest Image')",
           "textEditor": false
         }
       ],
@@ -2118,7 +2118,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.LastVisualChange.$function, 'Last Visual Change')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.LastVisualChange.$function, 'Last Visual Change')",
           "textEditor": false
         }
       ],
@@ -2200,7 +2200,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.bestpractice.score, 'Best practice')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.bestpractice.score, 'Best practice')",
           "textEditor": false
         },
         {
@@ -2210,7 +2210,7 @@
           },
           "refCount": 0,
           "refId": "B",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.performance.score, 'Performance')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.performance.score, 'Performance')",
           "textEditor": false
         },
         {
@@ -2220,7 +2220,7 @@
           },
           "refCount": 0,
           "refId": "C",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.privacy.score, 'Privacy')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.privacy.score, 'Privacy')",
           "textEditor": false
         },
         {
@@ -2230,7 +2230,7 @@
           },
           "refCount": 0,
           "refId": "D",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.score, 'Total')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.score, 'Total')",
           "textEditor": false
         }
       ],
@@ -2345,7 +2345,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.axe.violations.critical.$function, 'Critical')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.axe.violations.critical.$function, 'Critical')",
           "textEditor": false
         }
       ],
@@ -2427,7 +2427,7 @@
           },
           "refCount": 0,
           "refId": "B",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.axe.violations.serious.$function, 'Serious')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.axe.violations.serious.$function, 'Serious')",
           "textEditor": false
         }
       ],
@@ -2509,7 +2509,7 @@
           },
           "refCount": 0,
           "refId": "B",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.axe.violations.moderate.$function, 'Moderate')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.axe.violations.moderate.$function, 'Moderate')",
           "textEditor": false
         }
       ],
@@ -2591,7 +2591,7 @@
           },
           "refCount": 0,
           "refId": "B",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.axe.violations.minor.$function, 'Minor')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.axe.violations.minor.$function, 'Minor')",
           "textEditor": false
         }
       ],
@@ -2709,7 +2709,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.beforeFirstContentfulPaint.tasks.$function, 'Long tasks before FCP')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.beforeFirstContentfulPaint.tasks.$function, 'Long tasks before FCP')",
           "textEditor": false
         }
       ],
@@ -2791,7 +2791,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.tasks.max, 'Number of long tasks')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.tasks.max, 'Number of long tasks')",
           "textEditor": false
         }
       ],
@@ -2873,7 +2873,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.durations.max, 'Longest long task')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.durations.max, 'Longest long task')",
           "textEditor": false
         }
       ],
@@ -2955,7 +2955,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.lastLongTask.$function, 'Last long task')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.lastLongTask.$function, 'Last long task')",
           "textEditor": false
         }
       ],
@@ -3090,7 +3090,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentSize, 'Content size')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentSize, 'Content size')",
           "textEditor": false
         },
         {
@@ -3100,7 +3100,7 @@
           },
           "refCount": 0,
           "refId": "B",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.transferSize, 'Transfer size')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.transferSize, 'Transfer size')",
           "textEditor": false
         }
       ],
@@ -3199,7 +3199,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.requests, 'Requests')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.requests, 'Requests')",
           "textEditor": false
         }
       ],
@@ -3298,7 +3298,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.pageinfo.domElements.$function, 'DOM elements')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.pageinfo.domElements.$function, 'DOM elements')",
           "textEditor": false
         }
       ],
@@ -3397,7 +3397,7 @@
           },
           "refCount": 0,
           "refId": "A",
-          "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.totalDomains, 'Total domains')",
+          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.totalDomains, 'Total domains')",
           "textEditor": false
         }
       ],
@@ -3533,7 +3533,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.html.contentSize, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.html.contentSize, 11)",
               "textEditor": false
             },
             {
@@ -3543,7 +3543,7 @@
               },
               "refCount": 0,
               "refId": "B",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.html.transferSize, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.html.transferSize, 11)",
               "textEditor": false
             }
           ],
@@ -3640,7 +3640,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.javascript.contentSize, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.javascript.contentSize, 11)",
               "textEditor": false
             },
             {
@@ -3650,7 +3650,7 @@
               },
               "refCount": 0,
               "refId": "B",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.javascript.transferSize, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.javascript.transferSize, 11)",
               "textEditor": false
             }
           ],
@@ -3747,7 +3747,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.css.contentSize, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.css.contentSize, 11)",
               "textEditor": false
             },
             {
@@ -3757,7 +3757,7 @@
               },
               "refCount": 0,
               "refId": "B",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.css.transferSize, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.css.transferSize, 11)",
               "textEditor": false
             }
           ],
@@ -3854,7 +3854,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.image.contentSize, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.image.contentSize, 11)",
               "textEditor": false
             }
           ],
@@ -3926,7 +3926,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.*.contentSize, 10)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.*.contentSize, 10)",
               "textEditor": false
             }
           ],
@@ -3998,7 +3998,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.*.transferSize, 10)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.*.transferSize, 10)",
               "textEditor": false
             }
           ],
@@ -4136,7 +4136,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.renderBlocking.recalculateStyle.beforeFCP.elements.$function, 'Elements before First Contentful Paint (FCP)')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.renderBlocking.recalculateStyle.beforeFCP.elements.$function, 'Elements before First Contentful Paint (FCP)')",
               "textEditor": false
             },
             {
@@ -4147,7 +4147,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.renderBlocking.recalculateStyle.beforeLCP.elements.$function, 'Elements before Largest Contentful Paint (LCP)')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.renderBlocking.recalculateStyle.beforeLCP.elements.$function, 'Elements before Largest Contentful Paint (LCP)')",
               "textEditor": false
             }
           ],
@@ -4247,7 +4247,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.renderBlocking.recalculateStyle.beforeFCP.durationInMillis.$function, 'Time in recalculate style before First Contentful Paint (FCP)')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.renderBlocking.recalculateStyle.beforeFCP.durationInMillis.$function, 'Time in recalculate style before First Contentful Paint (FCP)')",
               "textEditor": false
             },
             {
@@ -4258,7 +4258,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.renderBlocking.recalculateStyle.beforeLCP.durationInMillis.$function, 'Time in recalculate style before Largest Contentful Paint (LCP)')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.renderBlocking.recalculateStyle.beforeLCP.durationInMillis.$function, 'Time in recalculate style before Largest Contentful Paint (LCP)')",
               "textEditor": false
             }
           ],
@@ -4534,7 +4534,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.bestpractice.score, 'Best practice')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.bestpractice.score, 'Best practice')",
               "textEditor": false
             },
             {
@@ -4544,7 +4544,7 @@
               },
               "refCount": 0,
               "refId": "B",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.performance.score, 'Performance')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.performance.score, 'Performance')",
               "textEditor": false
             },
             {
@@ -4554,7 +4554,7 @@
               },
               "refCount": 0,
               "refId": "C",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.privacy.score, 'Privacy')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.privacy.score, 'Privacy')",
               "textEditor": false
             },
             {
@@ -4564,7 +4564,7 @@
               },
               "refCount": 0,
               "refId": "D",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.score, 'Total')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.score, 'Total')",
               "textEditor": false
             }
           ],
@@ -4697,7 +4697,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.mainDocumentTimings.*.$function, 12)"
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.mainDocumentTimings.*.$function, 12)"
             }
           ],
           "title": "Main document timings",
@@ -4813,7 +4813,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.axe.violations.critical.$function, 'Critical')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.axe.violations.critical.$function, 'Critical')",
               "textEditor": false
             },
             {
@@ -4823,7 +4823,7 @@
               },
               "refCount": 0,
               "refId": "B",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.axe.violations.serious.$function, 'Serious')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.axe.violations.serious.$function, 'Serious')",
               "textEditor": false
             },
             {
@@ -4833,7 +4833,7 @@
               },
               "refCount": 0,
               "refId": "C",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.axe.violations.moderate.$function, 'Moderate')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.axe.violations.moderate.$function, 'Moderate')",
               "textEditor": false
             },
             {
@@ -4843,7 +4843,7 @@
               },
               "refCount": 0,
               "refId": "D",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.axe.violations.minor.$function, 'Minor')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.axe.violations.minor.$function, 'Minor')",
               "textEditor": false
             }
           ],
@@ -4984,7 +4984,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "alias(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.firstContentfulPaint.$function, '24h'), 'Last 24 hours')",
+              "target": "alias(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.firstContentfulPaint.$function, '24h'), 'Last 24 hours')",
               "textEditor": false
             },
             {
@@ -4995,7 +4995,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "A",
-              "target": "alias(timeShift(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.firstContentfulPaint.$function, '24h'), '7d'), 'One week earlier')",
+              "target": "alias(timeShift(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.firstContentfulPaint.$function, '24h'), '7d'), 'One week earlier')",
               "textEditor": false
             }
           ],
@@ -5118,7 +5118,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "alias(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.largestContentfulPaint.$function, '24h'), 'Last 24 hours')",
+              "target": "alias(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.largestContentfulPaint.$function, '24h'), 'Last 24 hours')",
               "textEditor": false
             },
             {
@@ -5129,7 +5129,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "A",
-              "target": "alias(timeShift(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.largestContentfulPaint.$function, '24h'), '7d'), 'One week earlier')",
+              "target": "alias(timeShift(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.largestContentfulPaint.$function, '24h'), '7d'), 'One week earlier')",
               "textEditor": false
             }
           ],
@@ -5250,7 +5250,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "alias(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.totalBlockingTime.$function, '24h'), 'Last 24 hours')",
+              "target": "alias(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.totalBlockingTime.$function, '24h'), 'Last 24 hours')",
               "textEditor": false
             },
             {
@@ -5261,7 +5261,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "A",
-              "target": "alias(timeShift(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.totalBlockingTime.$function, '24h'), '7d'), 'One week earlier')",
+              "target": "alias(timeShift(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.totalBlockingTime.$function, '24h'), '7d'), 'One week earlier')",
               "textEditor": false
             }
           ],
@@ -5382,7 +5382,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "alias(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.cumulativeLayoutShift.$function, '24h'), 'Last 24 hours')",
+              "target": "alias(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.cumulativeLayoutShift.$function, '24h'), 'Last 24 hours')",
               "textEditor": false
             },
             {
@@ -5393,7 +5393,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "A",
-              "target": "alias(timeShift(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.cumulativeLayoutShift.$function, '24h'), '7d'), 'One week earlier')",
+              "target": "alias(timeShift(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.googleWebVitals.cumulativeLayoutShift.$function, '24h'), '7d'), 'One week earlier')",
               "textEditor": false
             }
           ],
@@ -5506,7 +5506,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.paintTiming.first-contentful-paint.$function, 'FCP')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.paintTiming.first-contentful-paint.$function, 'FCP')",
               "textEditor": false
             }
           ],
@@ -5602,7 +5602,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.pageinfo.cumulativeLayoutShift.$function, 'CLS')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.pageinfo.cumulativeLayoutShift.$function, 'CLS')",
               "textEditor": false
             }
           ],
@@ -5697,7 +5697,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.largestContentfulPaint.renderTime.$function, 'LCP')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.largestContentfulPaint.renderTime.$function, 'LCP')",
               "textEditor": false
             }
           ],
@@ -5792,7 +5792,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.totalBlockingTime.$function, 'TBT')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.totalBlockingTime.$function, 'TBT')",
               "textEditor": false
             }
           ],
@@ -5934,7 +5934,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.navigationTiming.*.$function, 12)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.navigationTiming.*.$function, 12)",
               "textEditor": false
             }
           ],
@@ -6014,7 +6014,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.documentHeight, 'Document height (pixels)')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.documentHeight, 'Document height (pixels)')",
               "textEditor": false
             }
           ],
@@ -6086,7 +6086,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.totalDomains, 'Number of domains')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.totalDomains, 'Number of domains')",
               "textEditor": false
             }
           ],
@@ -6158,7 +6158,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.iframes, 'Number of iframes')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.iframes, 'Number of iframes')",
               "textEditor": false
             }
           ],
@@ -6230,7 +6230,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.cookies, 'Number of cookies')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.cookies, 'Number of cookies')",
               "textEditor": false
             }
           ],
@@ -6302,7 +6302,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.thirdParty.cookies, 'Third Party Cookies')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.thirdParty.cookies, 'Third Party Cookies')",
               "textEditor": false
             }
           ],
@@ -6374,7 +6374,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.expireStats.$function, 'The $function cache expire time of all responses')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.expireStats.$function, 'The $function cache expire time of all responses')",
               "textEditor": false
             }
           ],
@@ -6447,7 +6447,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.lastModifiedStats.$function, 'The $function last modified time of all responses')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.lastModifiedStats.$function, 'The $function last modified time of all responses')",
               "textEditor": false
             }
           ],
@@ -6519,7 +6519,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.domDepth.avg, 'Average DOM depth')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.domDepth.avg, 'Average DOM depth')",
               "textEditor": false
             }
           ],
@@ -6591,7 +6591,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.domDepth.max, 'Max DOM depth')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.domDepth.max, 'Max DOM depth')",
               "textEditor": false
             }
           ],
@@ -6663,7 +6663,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.localStorageSize, 'Local storage size')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.localStorageSize, 'Local storage size')",
               "textEditor": false
             }
           ],
@@ -6735,7 +6735,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.scripts, 'Number of scripts')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.scripts, 'Number of scripts')",
               "textEditor": false
             }
           ],
@@ -6850,7 +6850,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.*.requests, 10)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.contentTypes.*.requests, 10)",
               "textEditor": false
             }
           ],
@@ -6972,7 +6972,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.tasks.$function, 'Long Tasks')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.tasks.$function, 'Long Tasks')",
               "textEditor": true
             }
           ],
@@ -7047,7 +7047,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.beforeFirstContentfulPaint.tasks.$function, 'Long Tasks Before FCP')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.beforeFirstContentfulPaint.tasks.$function, 'Long Tasks Before FCP')",
               "textEditor": true
             }
           ],
@@ -7126,7 +7126,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.totalBlockingTime.$function, 'Total Blocking Time')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.totalBlockingTime.$function, 'Total Blocking Time')",
               "textEditor": true
             }
           ],
@@ -7205,7 +7205,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.durations.max, 'Longest Long Task')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.durations.max, 'Longest Long Task')",
               "textEditor": true
             }
           ],
@@ -7304,7 +7304,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.tasks.$function, 'Long Tasks')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.tasks.$function, 'Long Tasks')",
               "textEditor": true
             }
           ],
@@ -7404,7 +7404,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.beforeFirstContentfulPaint.tasks.$function, 'Long Tasks Before FCP')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.beforeFirstContentfulPaint.tasks.$function, 'Long Tasks Before FCP')",
               "textEditor": false
             }
           ],
@@ -7503,7 +7503,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.totalBlockingTime.$function, 'Total Blocking Time')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.totalBlockingTime.$function, 'Total Blocking Time')",
               "textEditor": true
             }
           ],
@@ -7602,7 +7602,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.durations.max, 'Longest Long Task')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.longTasks.durations.max, 'Longest Long Task')",
               "textEditor": true
             }
           ],
@@ -7742,7 +7742,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.categories.*.median, 12)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.categories.*.median, 12)",
               "textEditor": false
             }
           ],
@@ -7839,7 +7839,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "currentAbove(aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.events.*.median, 12), 1)",
+              "target": "currentAbove(aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cpu.events.*.median, 12), 1)",
               "textEditor": false
             }
           ],
@@ -7956,7 +7956,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cdp.performance.JSHeapTotalSize.$function, 12)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cdp.performance.JSHeapTotalSize.$function, 12)",
               "textEditor": false
             },
             {
@@ -7966,7 +7966,7 @@
               },
               "refCount": 0,
               "refId": "B",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cdp.performance.JSHeapUsedSize.$function, 12)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.cdp.performance.JSHeapUsedSize.$function, 12)",
               "textEditor": false
             }
           ],
@@ -8143,7 +8143,7 @@
               },
               "refCount": 0,
               "refId": "G",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.deltaToTFFB.*.$function, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.deltaToTFFB.*.$function, 11)",
               "textEditor": false
             }
           ],
@@ -8243,7 +8243,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.sustainable.totalCO2.$function, 'Total C02')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.sustainable.totalCO2.$function, 'Total C02')",
               "textEditor": true
             }
           ],
@@ -8324,7 +8324,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.sustainable.co2PerPageView.$function, 'CO2 Per Page View')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.sustainable.co2PerPageView.$function, 'CO2 Per Page View')",
               "textEditor": true
             }
           ],
@@ -8405,7 +8405,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.sustainable.co2FirstParty.$function, 'CO2 First Party')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.sustainable.co2FirstParty.$function, 'CO2 First Party')",
               "textEditor": true
             }
           ],
@@ -8486,7 +8486,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.sustainable.co2ThirdParty.$function, 'CO2 Third Party')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.sustainable.co2ThirdParty.$function, 'CO2 Third Party')",
               "textEditor": true
             }
           ],
@@ -8627,7 +8627,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.fullyLoaded.$function, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.fullyLoaded.$function, 11)",
               "textEditor": false
             },
             {
@@ -8637,7 +8637,7 @@
               },
               "refCount": 0,
               "refId": "B",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.firstPaint.$function, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.firstPaint.$function, 11)",
               "textEditor": false
             },
             {
@@ -8647,7 +8647,7 @@
               },
               "refCount": 0,
               "refId": "C",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.largestContentfulPaint.renderTime.$function, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.largestContentfulPaint.renderTime.$function, 11)",
               "textEditor": false
             },
             {
@@ -8657,7 +8657,7 @@
               },
               "refCount": 0,
               "refId": "D",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.loadEventEnd.$function, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.loadEventEnd.$function, 11)",
               "textEditor": false
             },
             {
@@ -8667,7 +8667,7 @@
               },
               "refCount": 0,
               "refId": "E",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.pageTimings.domContentLoadedTime.$function, 12)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.pageTimings.domContentLoadedTime.$function, 12)",
               "textEditor": false
             },
             {
@@ -8677,7 +8677,7 @@
               },
               "refCount": 0,
               "refId": "F",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.pageTimings.serverResponseTime.$function, 12)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.pageTimings.serverResponseTime.$function, 12)",
               "textEditor": false
             },
             {
@@ -8687,7 +8687,7 @@
               },
               "refCount": 0,
               "refId": "G",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.timeToContentfulPaint, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.timeToContentfulPaint, 11)",
               "textEditor": false
             },
             {
@@ -8697,7 +8697,7 @@
               },
               "refCount": 0,
               "refId": "H",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.timeToFirstInteractive, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.timeToFirstInteractive, 11)",
               "textEditor": false
             }
           ],
@@ -8797,7 +8797,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.elementTimings.*.renderTime.$function, 12)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.elementTimings.*.renderTime.$function, 12)",
               "textEditor": false
             }
           ],
@@ -8897,7 +8897,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.userTimings.marks.*.$function, 13)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.userTimings.marks.*.$function, 13)",
               "textEditor": false
             }
           ],
@@ -8997,7 +8997,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.userTimings.measures.*.$function, 13)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.userTimings.measures.*.$function, 13)",
               "textEditor": false
             }
           ],
@@ -9140,7 +9140,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.mainDocumentTimings.*.$function, 12)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.mainDocumentTimings.*.$function, 12)",
               "textEditor": false
             }
           ],
@@ -9281,7 +9281,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "aliasByNode(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.FirstVisualChange.$function, '24h'), 11)",
+              "target": "aliasByNode(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.FirstVisualChange.$function, '24h'), 11)",
               "textEditor": false
             },
             {
@@ -9292,7 +9292,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "A",
-              "target": "alias(timeShift(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.FirstVisualChange.$function, '24h'), '7d'), 'One week earlier')",
+              "target": "alias(timeShift(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.FirstVisualChange.$function, '24h'), '7d'), 'One week earlier')",
               "textEditor": false
             }
           ],
@@ -9415,7 +9415,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "aliasByNode(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.SpeedIndex.$function, '24h'), 11)",
+              "target": "aliasByNode(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.SpeedIndex.$function, '24h'), 11)",
               "textEditor": false
             },
             {
@@ -9426,7 +9426,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "A",
-              "target": "alias(timeShift(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.SpeedIndex.$function, '24h'), '7d'), 'One week earlier')",
+              "target": "alias(timeShift(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.SpeedIndex.$function, '24h'), '7d'), 'One week earlier')",
               "textEditor": false
             }
           ],
@@ -9550,7 +9550,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "alias(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.pageTimings.serverResponseTime.$function, '24h'), 'TTFB')",
+              "target": "alias(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.pageTimings.serverResponseTime.$function, '24h'), 'TTFB')",
               "textEditor": false
             },
             {
@@ -9561,7 +9561,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "A",
-              "target": "alias(timeShift(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.pageTimings.serverResponseTime.$function, '24h'), '7d'), 'One week earlier')",
+              "target": "alias(timeShift(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.pageTimings.serverResponseTime.$function, '24h'), '7d'), 'One week earlier')",
               "textEditor": false
             }
           ],
@@ -9684,7 +9684,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "aliasByNode(movingAverage($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.fullyLoaded.$function, '24h'), 11)",
+              "target": "aliasByNode(movingAverage($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.fullyLoaded.$function, '24h'), 11)",
               "textEditor": false
             },
             {
@@ -9799,7 +9799,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.FirstVisualChange.$function, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.visualMetrics.FirstVisualChange.$function, 11)",
               "textEditor": false
             }
           ],
@@ -9917,7 +9917,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.thirdParty.cookies, 'Third Party Cookies')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.thirdParty.cookies, 'Third Party Cookies')",
               "textEditor": true
             },
             {
@@ -9927,7 +9927,7 @@
               },
               "refCount": 0,
               "refId": "B",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.firstParty.cookies, 'First Party Cookies')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.firstParty.cookies, 'First Party Cookies')",
               "textEditor": false
             }
           ],
@@ -10100,7 +10100,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.thirdparty.category.*.requests.$function, 10)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.thirdparty.category.*.requests.$function, 10)",
               "textEditor": false
             }
           ],
@@ -10255,7 +10255,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.thirdparty.category.*.tools.$function, 10)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.thirdparty.category.*.tools.$function, 10)",
               "textEditor": false
             }
           ],
@@ -10353,7 +10353,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.thirdparty.tool.*.cpu, 10)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.thirdparty.tool.*.cpu, 10)",
               "textEditor": false
             }
           ],
@@ -10471,7 +10471,7 @@
                 "uid": "graphite"
               },
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.pagexray.responseCodes.*, 10)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.responseCodes.*, 10)",
               "textEditor": false
             }
           ],
@@ -10589,7 +10589,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.console.*.$function, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.console.*.$function, 11)",
               "textEditor": false
             }
           ],
@@ -10689,7 +10689,7 @@
               },
               "refCount": 0,
               "refId": "A",
-              "target": "aliasByNode($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.errors.$function, 11)",
+              "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.errors.$function, 11)",
               "textEditor": false
             }
           ],
@@ -10866,7 +10866,7 @@
               },
               "refCount": 0,
               "refId": "G",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.browser.cpuBenchmark.min, 'min')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.browser.cpuBenchmark.min, 'min')",
               "textEditor": false
             },
             {
@@ -10877,7 +10877,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.browser.cpuBenchmark.median, 'median')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.browser.cpuBenchmark.median, 'median')",
               "textEditor": false
             },
             {
@@ -10888,7 +10888,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.browser.cpuBenchmark.max, 'max')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.browser.cpuBenchmark.max, 'max')",
               "textEditor": false
             }
           ],
@@ -11023,7 +11023,7 @@
               },
               "refCount": 0,
               "refId": "G",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.browser.cpuBenchmark.stddev, 'stddev')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.browser.cpuBenchmark.stddev, 'stddev')",
               "textEditor": false
             }
           ],
@@ -11200,7 +11200,7 @@
               },
               "refCount": 0,
               "refId": "G",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.ttfb.min, 'min')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.ttfb.min, 'min')",
               "textEditor": false
             },
             {
@@ -11211,7 +11211,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "A",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.ttfb.median, 'median')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.ttfb.median, 'median')",
               "textEditor": false
             },
             {
@@ -11222,7 +11222,7 @@
               "hide": false,
               "refCount": 0,
               "refId": "B",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.ttfb.max, 'max')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.ttfb.max, 'max')",
               "textEditor": false
             }
           ],
@@ -11357,7 +11357,7 @@
               },
               "refCount": 0,
               "refId": "G",
-              "target": "alias($base.$path.$testname.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.ttfb.stddev, 'stddev')",
+              "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.browsertime.statistics.timings.ttfb.stddev, 'stddev')",
               "textEditor": false
             }
           ],
@@ -11443,14 +11443,14 @@
           "type": "graphite",
           "uid": "graphite"
         },
-        "definition": "$base.$path.$testname.pageSummary.*",
+        "definition": "$base.$path.pageSummary.*",
         "hide": 0,
         "includeAll": false,
         "label": "domain",
         "multi": false,
         "name": "group",
         "options": [],
-        "query": "$base.$path.$testname.pageSummary.*",
+        "query": "$base.$path.pageSummary.*",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -11464,13 +11464,13 @@
           "type": "graphite",
           "uid": "graphite"
         },
-        "definition": "$base.$path.$testname.pageSummary.$group.*",
+        "definition": "$base.$path.pageSummary.$group.*",
         "hide": 0,
         "includeAll": false,
         "multi": false,
         "name": "page",
         "options": [],
-        "query": "$base.$path.$testname.pageSummary.$group.*",
+        "query": "$base.$path.pageSummary.$group.*",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -11484,13 +11484,13 @@
           "type": "graphite",
           "uid": "graphite"
         },
-        "definition": "$base.$path.$testname.pageSummary.$group.$page.*",
+        "definition": "$base.$path.pageSummary.$group.$page.*",
         "hide": 0,
         "includeAll": false,
         "multi": false,
         "name": "browser",
         "options": [],
-        "query": "$base.$path.$testname.pageSummary.$group.$page.*",
+        "query": "$base.$path.pageSummary.$group.$page.*",
         "refresh": 1,
         "regex": "chrome|firefox|safari|edge",
         "skipUrlSync": false,
@@ -11504,13 +11504,13 @@
           "type": "graphite",
           "uid": "graphite"
         },
-        "definition": "$base.$path.$testname.pageSummary.$group.$page.$browser.*",
+        "definition": "$base.$path.pageSummary.$group.$page.$browser.*",
         "hide": 0,
         "includeAll": false,
         "multi": false,
         "name": "connectivity",
         "options": [],
-        "query": "$base.$path.$testname.pageSummary.$group.$page.$browser.*",
+        "query": "$base.$path.pageSummary.$group.$page.$browser.*",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
