@@ -3,5 +3,6 @@
   "iterations": 1,
   "script": "scripts/infoservices-journey.js",
   "outputFolder": "results",
-  "enable_graphite": false
+  "enable_graphite": true,
+  "resultBaseURL": ""
 }

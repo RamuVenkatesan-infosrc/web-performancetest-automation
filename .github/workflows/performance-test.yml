@@ -76,9 +76,16 @@ jobs:
 
       - name: Run sitespeed.io Container
         run: |
+          CONF_BASEURL=$(jq -r '.resultBaseURL // ""' config.json)
+
           GRAPHITE_ARGS=""
           if [ "${{ steps.config.outputs.enable_graphite }}" = "true" ] && [ -n "${{ secrets.GRAPHITE_HOST }}" ]; then
             GRAPHITE_ARGS="--graphite.host ${{ secrets.GRAPHITE_HOST }} --graphite.port ${{ secrets.GRAPHITE_PORT || '2003' }} --graphite.namespace sitespeed_io.ci"
+          fi
+
+          BASE_URL_ARG=""
+          if [ -n "$CONF_BASEURL" ]; then
+            BASE_URL_ARG="--resultBaseURL $CONF_BASEURL"
           fi
 
           docker run --rm \
@@ -88,7 +95,8 @@ jobs:
             --browser ${{ steps.config.outputs.browser }} \
             -n ${{ steps.config.outputs.iterations }} \
             --outputFolder ${{ steps.config.outputs.output_dir }} \
-            $GRAPHITE_ARGS
+            $GRAPHITE_ARGS $BASE_URL_ARG
+
 
       - name: Upload Structured Results as Artifact
         if: always()
