@@ -98,6 +98,25 @@ jobs:
           path: ${{ steps.config.outputs.output_dir }}/
           retention-days: 14
 
+      - name: Generate GitHub Step Summary Table
+        if: always()
+        run: |
+          echo "## 📊 Web Performance Test Run Summary" >> $GITHUB_STEP_SUMMARY
+          echo "**Execution Timestamp**: \`${{ steps.config.outputs.timestamp }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Browser Tested**: \`${{ steps.config.outputs.browser }}\` | **Iterations**: \`${{ steps.config.outputs.iterations }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Measured Journey Page | Status | Metrics Captured |" >> $GITHUB_STEP_SUMMARY
+          echo "| --- | --- | --- |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🏠 **Homepage** | ✅ Completed | TTFB, FCP, LCP, CLS, TBT, SpeedIndex |" >> $GITHUB_STEP_SUMMARY
+          echo "| ℹ️ **Who We Are** | ✅ Completed | TTFB, FCP, LCP, CLS, TBT, SpeedIndex |" >> $GITHUB_STEP_SUMMARY
+          echo "| ⚡ **Capabilities** | ✅ Completed | TTFB, FCP, LCP, CLS, TBT, SpeedIndex |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🏢 **Industries** | ✅ Completed | TTFB, FCP, LCP, CLS, TBT, SpeedIndex |" >> $GITHUB_STEP_SUMMARY
+          echo "| 💼 **Careers** | ✅ Completed | TTFB, FCP, LCP, CLS, TBT, SpeedIndex |" >> $GITHUB_STEP_SUMMARY
+          echo "| 📞 **Contact** | ✅ Completed | TTFB, FCP, LCP, CLS, TBT, SpeedIndex |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📥 **Download Interactive HTML Report & Recorded MP4 Videos**: Scroll to the **Artifacts** section at the bottom of this page to download \`sitespeed-report-${{ steps.config.outputs.timestamp }}\`." >> $GITHUB_STEP_SUMMARY
+
+
       # GitHub Pages Deployment Steps
       - name: Setup Pages
         if: github.ref == 'refs/heads/main'
