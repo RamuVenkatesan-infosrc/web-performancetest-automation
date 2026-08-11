@@ -1,9 +1,10 @@
 name: Web Performance Test (sitespeed.io)
 
 on:
-  # 1. Trigger automatically on push to main branch
+  # 1. Trigger automatically on every git push (all branches)
   push:
-    branches: [ main ]
+    branches: [ "**" ]
+
 
   # 2. Scheduled run (Every day at 02:00 AM UTC)
   schedule:
