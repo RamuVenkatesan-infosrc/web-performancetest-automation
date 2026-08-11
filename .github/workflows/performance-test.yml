@@ -5,7 +5,6 @@ on:
   push:
     branches: [ "**" ]
 
-
   # 2. Scheduled run (Every day at 02:00 AM UTC)
   schedule:
     - cron: '0 2 * * *'
@@ -38,6 +37,7 @@ jobs:
           CONF_BROWSER=$(jq -r '.browser // "chrome"' config.json)
           CONF_ITERATIONS=$(jq -r '.iterations // 1' config.json)
           CONF_SCRIPT=$(jq -r '.script // "scripts/infoservices-journey.js"' config.json)
+          CONF_OUTPUT=$(jq -r '.outputFolder // "results"' config.json)
           CONF_GRAPHITE=$(jq -r '.enable_graphite // false' config.json)
 
           # Manual UI inputs override config.json if provided
@@ -52,10 +52,12 @@ jobs:
           fi
 
           TIMESTAMP=$(date +'%Y-%m-%d-%H-%M-%S')
+          RUN_OUTPUT_DIR="${CONF_OUTPUT}/${TIMESTAMP}"
 
           echo "browser=$BROWSER" >> $GITHUB_OUTPUT
           echo "iterations=$ITERATIONS" >> $GITHUB_OUTPUT
           echo "script=$CONF_SCRIPT" >> $GITHUB_OUTPUT
+          echo "output_dir=$RUN_OUTPUT_DIR" >> $GITHUB_OUTPUT
           echo "enable_graphite=$CONF_GRAPHITE" >> $GITHUB_OUTPUT
           echo "timestamp=$TIMESTAMP" >> $GITHUB_OUTPUT
 
@@ -63,6 +65,7 @@ jobs:
           echo "  Browser    : $BROWSER"
           echo "  Iterations : $ITERATIONS"
           echo "  Script     : $CONF_SCRIPT"
+          echo "  Output Dir : $RUN_OUTPUT_DIR"
           echo "  Graphite   : $CONF_GRAPHITE"
 
       - name: Run sitespeed.io Container
@@ -78,13 +81,13 @@ jobs:
             ${{ steps.config.outputs.script }} \
             --browser ${{ steps.config.outputs.browser }} \
             -n ${{ steps.config.outputs.iterations }} \
-            --outputFolder sitespeed-result \
+            --outputFolder ${{ steps.config.outputs.output_dir }} \
             $GRAPHITE_ARGS
 
-      - name: Upload HTML Report as Artifact
+      - name: Upload Structured Results as Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: sitespeed-report-${{ steps.config.outputs.timestamp }}
-          path: sitespeed-result/
+          path: ${{ steps.config.outputs.output_dir }}/
           retention-days: 14

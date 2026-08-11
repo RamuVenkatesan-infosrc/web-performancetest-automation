@@ -13,6 +13,7 @@ All test options are centrally managed in `config.json`:
   "browser": "chrome",
   "iterations": 1,
   "script": "scripts/infoservices-journey.js",
+  "outputFolder": "results",
   "enable_graphite": false
 }
 ```
@@ -22,7 +23,22 @@ All test options are centrally managed in `config.json`:
 | `browser` | Target browser for execution | `"chrome"` / `"firefox"` |
 | `iterations` | Number of test runs per page | `1`, `3`, `5` |
 | `script` | Target journey script to execute | `"scripts/infoservices-journey.js"` |
+| `outputFolder` | Root folder for test report outputs | `"results"` |
 | `enable_graphite` | Push metrics to Graphite/Grafana | `true` / `false` |
+
+---
+
+## 📊 Structured Test Results & Output Folders
+
+Each pipeline execution automatically creates a timestamped results directory:
+
+```
+results/
+└── 2026-08-11-16-56-20/           # Dynamic Timestamp Folder
+    ├── index.html                 # Main Interactive HTML Report
+    ├── pages/                     # Per-page Screenshots, MP4 Videos & HAR Files
+    └── data/                      # Raw JSON Metrics
+```
 
 ---
 
@@ -30,9 +46,12 @@ All test options are centrally managed in `config.json`:
 
 The pipeline (`.github/workflows/performance-test.yml`) automatically triggers in **3 ways**:
 
-1. **Automatic Git Push**: Whenever you push changes to `main` branch, the pipeline executes automatically using settings in `config.json`.
+1. **Automatic Git Push**: Whenever you push changes to any branch, the pipeline executes automatically using settings in `config.json`.
 2. **Scheduled Cron**: Runs daily at 02:00 AM UTC.
 3. **Manual Trigger**: Go to **Actions** → **Web Performance Test (sitespeed.io)** → **Run workflow** (Optional UI inputs override `config.json`).
+
+### Artifacts & Reports:
+After each run, download the generated HTML report & MP4 videos directly from the **GitHub Actions Run Summary** under **Artifacts** (`sitespeed-report-<timestamp>`).
 
 ---
 
@@ -46,9 +65,9 @@ docker run --rm `
   sitespeedio/sitespeed.io `
   scripts/infoservices-journey.js `
   --browser chrome -n 1 `
-  --outputFolder sitespeed-result
+  --outputFolder results/latest
 ```
 
-### View Results:
-- Open `sitespeed-result/index.html` in your browser.
-- Recorded MP4 videos & screenshots are under `sitespeed-result/pages/`.
+### View Local Results:
+- Open `results/latest/index.html` in your browser.
+- Recorded MP4 videos & screenshots are under `results/latest/pages/`.

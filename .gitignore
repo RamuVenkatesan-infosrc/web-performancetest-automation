@@ -1,4 +1,5 @@
-# Output Directories
+# Test Output Directories
+results/
 sitespeed-result/
 *.log
 
