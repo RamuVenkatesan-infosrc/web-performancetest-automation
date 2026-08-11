@@ -4,18 +4,35 @@ Automated Web Performance Testing suite powered by **sitespeed.io**, **Docker**,
 
 ---
 
-## 📁 Repository Structure
+## ⚙️ Configuration (`config.json`)
 
+All test options are centrally managed in `config.json`:
+
+```json
+{
+  "browser": "chrome",
+  "iterations": 1,
+  "script": "scripts/infoservices-journey.js",
+  "enable_graphite": false
+}
 ```
-web-performancetest-automation/
-├── .github/
-│   └── workflows/
-│       └── performance-test.yml     # GitHub Actions CI/CD Pipeline
-├── scripts/
-│   └── infoservices-journey.js      # 7-Step User Journey Performance Script
-├── .gitignore                       # Excludes test outputs and logs
-└── README.md                        # Documentation
-```
+
+| Setting | Description | Options |
+|---------|-------------|---------|
+| `browser` | Target browser for execution | `"chrome"` / `"firefox"` |
+| `iterations` | Number of test runs per page | `1`, `3`, `5` |
+| `script` | Target journey script to execute | `"scripts/infoservices-journey.js"` |
+| `enable_graphite` | Push metrics to Graphite/Grafana | `true` / `false` |
+
+---
+
+## ⚡ Automated CI/CD Pipeline (GitHub Actions)
+
+The pipeline (`.github/workflows/performance-test.yml`) automatically triggers in **3 ways**:
+
+1. **Automatic Git Push**: Whenever you push changes to `main` branch, the pipeline executes automatically using settings in `config.json`.
+2. **Scheduled Cron**: Runs daily at 02:00 AM UTC.
+3. **Manual Trigger**: Go to **Actions** → **Web Performance Test (sitespeed.io)** → **Run workflow** (Optional UI inputs override `config.json`).
 
 ---
 
@@ -34,23 +51,4 @@ docker run --rm `
 
 ### View Results:
 - Open `sitespeed-result/index.html` in your browser.
-- Videos & filmstrips are located under `sitespeed-result/pages/`.
-
----
-
-## ⚡ Automated CI/CD Pipeline (GitHub Actions)
-
-The workflow (`.github/workflows/performance-test.yml`) runs automatically:
-- **Scheduled**: Every day at 02:00 AM UTC.
-- **Manual Trigger**: Go to **Actions** → **Web Performance Test (sitespeed.io)** → **Run workflow**.
-
-### Artifacts & Reports:
-After each run, download the generated HTML report & MP4 videos directly from the **GitHub Actions Run Summary** under **Artifacts**.
-
----
-
-## ➕ Adding New Journey Tests
-
-To add a new performance scenario (e.g. `login-journey.js`):
-1. Add your script inside `scripts/new-journey.js`.
-2. Update `.github/workflows/performance-test.yml` to reference `scripts/new-journey.js`.
+- Recorded MP4 videos & screenshots are under `sitespeed-result/pages/`.

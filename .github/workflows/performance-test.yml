@@ -1,25 +1,25 @@
 name: Web Performance Test (sitespeed.io)
 
 on:
-  # 1. Scheduled run (Every day at 02:00 AM UTC)
+  # 1. Trigger automatically on push to main branch
+  push:
+    branches: [ main ]
+
+  # 2. Scheduled run (Every day at 02:00 AM UTC)
   schedule:
     - cron: '0 2 * * *'
 
-  # 2. Manual trigger via GitHub UI
+  # 3. Manual trigger via GitHub UI (Overrides config.json if supplied)
   workflow_dispatch:
     inputs:
       iterations:
-        description: 'Number of test iterations (-n)'
-        required: true
-        default: '1'
-      browser:
-        description: 'Browser type (chrome / firefox)'
-        required: true
-        default: 'chrome'
-      enable_graphite:
-        description: 'Send metrics to Graphite? (true / false)'
+        description: 'Number of test iterations (-n) [Leave blank to use config.json]'
         required: false
-        default: 'false'
+        default: ''
+      browser:
+        description: 'Browser type (chrome / firefox) [Leave blank to use config.json]'
+        required: false
+        default: ''
 
 jobs:
   performance-test:
@@ -30,39 +30,60 @@ jobs:
       - name: Checkout Repository Code
         uses: actions/checkout@v4
 
-      - name: Set up Test Metadata
-        id: metadata
+      - name: Parse Test Configuration
+        id: config
         run: |
-          ITERATIONS="${{ github.event.inputs.iterations || '1' }}"
-          BROWSER="${{ github.event.inputs.browser || 'chrome' }}"
+          # Read values from config.json with fallbacks
+          CONF_BROWSER=$(jq -r '.browser // "chrome"' config.json)
+          CONF_ITERATIONS=$(jq -r '.iterations // 1' config.json)
+          CONF_SCRIPT=$(jq -r '.script // "scripts/infoservices-journey.js"' config.json)
+          CONF_GRAPHITE=$(jq -r '.enable_graphite // false' config.json)
+
+          # Manual UI inputs override config.json if provided
+          BROWSER="${{ github.event.inputs.browser }}"
+          if [ -z "$BROWSER" ]; then
+            BROWSER="$CONF_BROWSER"
+          fi
+
+          ITERATIONS="${{ github.event.inputs.iterations }}"
+          if [ -z "$ITERATIONS" ]; then
+            ITERATIONS="$CONF_ITERATIONS"
+          fi
+
           TIMESTAMP=$(date +'%Y-%m-%d-%H-%M-%S')
-          echo "iterations=$ITERATIONS" >> $GITHUB_OUTPUT
+
           echo "browser=$BROWSER" >> $GITHUB_OUTPUT
+          echo "iterations=$ITERATIONS" >> $GITHUB_OUTPUT
+          echo "script=$CONF_SCRIPT" >> $GITHUB_OUTPUT
+          echo "enable_graphite=$CONF_GRAPHITE" >> $GITHUB_OUTPUT
           echo "timestamp=$TIMESTAMP" >> $GITHUB_OUTPUT
+
+          echo "Configuration Loaded:"
+          echo "  Browser    : $BROWSER"
+          echo "  Iterations : $ITERATIONS"
+          echo "  Script     : $CONF_SCRIPT"
+          echo "  Graphite   : $CONF_GRAPHITE"
 
       - name: Run sitespeed.io Container
         run: |
           GRAPHITE_ARGS=""
-          if [ "${{ github.event.inputs.enable_graphite }}" = "true" ] && [ -n "${{ secrets.GRAPHITE_HOST }}" ]; then
+          if [ "${{ steps.config.outputs.enable_graphite }}" = "true" ] && [ -n "${{ secrets.GRAPHITE_HOST }}" ]; then
             GRAPHITE_ARGS="--graphite.host ${{ secrets.GRAPHITE_HOST }} --graphite.port ${{ secrets.GRAPHITE_PORT || '2003' }} --graphite.namespace sitespeed_io.ci"
           fi
 
           docker run --rm \
             -v ${{ github.workspace }}:/sitespeed.io \
             sitespeedio/sitespeed.io:latest \
-            scripts/infoservices-journey.js \
-            --browser ${{ steps.metadata.outputs.browser }} \
-            -n ${{ steps.metadata.outputs.iterations }} \
+            ${{ steps.config.outputs.script }} \
+            --browser ${{ steps.config.outputs.browser }} \
+            -n ${{ steps.config.outputs.iterations }} \
             --outputFolder sitespeed-result \
             $GRAPHITE_ARGS
-
-
 
       - name: Upload HTML Report as Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: sitespeed-report-${{ steps.metadata.outputs.timestamp }}
+          name: sitespeed-report-${{ steps.config.outputs.timestamp }}
           path: sitespeed-result/
           retention-days: 14
-

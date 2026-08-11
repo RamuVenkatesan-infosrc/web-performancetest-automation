@@ -1,0 +1,6 @@
+{
+  "browser": "chrome",
+  "iterations": 1,
+  "script": "scripts/infoservices-journey.js",
+  "enable_graphite": false
+}
