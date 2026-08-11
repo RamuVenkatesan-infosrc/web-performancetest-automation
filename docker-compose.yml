@@ -1,0 +1,33 @@
+version: '3'
+services:
+  graphite:
+    image: sitespeedio/graphite:1.1.10-3
+    container_name: sitespeed-graphite
+    hostname: graphite
+    ports:
+      - "2003:2003"
+      - "8080:80"
+    restart: always
+    volumes:
+      - whisper:/opt/graphite/storage/whisper
+
+  grafana:
+    image: grafana/grafana:12.2.0
+    container_name: sitespeed-grafana
+    hostname: grafana
+    depends_on:
+      - graphite
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=sitespeedio
+      - GF_SECURITY_ADMIN_PASSWORD=hdeAga76VG6ga7plZ1
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_USERS_ALLOW_SIGN_UP=false
+    restart: always
+    volumes:
+      - grafana:/var/lib/grafana
+
+volumes:
+  grafana:
+  whisper:

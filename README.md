@@ -1,13 +1,25 @@
 # Web Performance Testing Automation (sitespeed.io)
 
-Automated Web Performance Testing suite powered by **sitespeed.io**, **Docker**, **GitHub Actions**, and **GitHub Pages**.
+Automated Web Performance Testing suite powered by **sitespeed.io**, **Docker**, **Grafana**, **Graphite**, and **GitHub Actions**.
 
 ---
 
-## 🌐 Live Web Performance Report Link
+## 🎯 All-In-One Visual Dashboard (Grafana + Graphite)
 
-The latest performance report is published live at:
-👉 **[https://RamuVenkatesan-infosrc.github.io/web-performancetest-automation/](https://RamuVenkatesan-infosrc.github.io/web-performancetest-automation/)**
+Launch Grafana and Graphite with **one single command**:
+
+```powershell
+docker compose up -d
+```
+
+### Access Everything in One Place (Grafana):
+👉 **URL**: `http://localhost:3000`
+- **Username**: `sitespeedio`
+- **Password**: `hdeAga76VG6ga7plZ1`
+
+Inside Grafana you can access **everything in 1 place**:
+1. **Performance Dashboards**: Go to **Dashboards** → **Page metrics** (View LCP, CLS, TBT, Speed Index).
+2. **Raw Graphite Metrics Explorer**: Go to **Explore** (left sidebar) → Query raw Graphite metrics directly inside Grafana!
 
 ---
 
@@ -21,7 +33,7 @@ All test options are centrally managed in `config.json`:
   "iterations": 1,
   "script": "scripts/infoservices-journey.js",
   "outputFolder": "results",
-  "enable_graphite": false
+  "enable_graphite": true
 }
 ```
 
@@ -31,20 +43,23 @@ All test options are centrally managed in `config.json`:
 | `iterations` | Number of test runs per page | `1`, `3`, `5` |
 | `script` | Target journey script to execute | `"scripts/infoservices-journey.js"` |
 | `outputFolder` | Root folder for test report outputs | `"results"` |
-| `enable_graphite` | Push metrics to Graphite/Grafana | `true` / `false` |
+| `enable_graphite` | Push metrics to Graphite & Grafana | `true` / `false` |
 
 ---
 
-## 📊 Structured Test Results & Output Folders
+## 🚀 Running Tests Locally
 
-Each pipeline execution automatically creates a timestamped results directory:
+Ensure `docker compose up -d` is running, then execute:
 
-```
-results/
-└── 2026-08-11-16-56-20/           # Dynamic Timestamp Directory
-    ├── index.html                 # Main Interactive HTML Report
-    ├── pages/                     # Per-page Screenshots, MP4 Videos & HAR Files
-    └── data/                      # Raw JSON Metrics
+```powershell
+docker run --rm `
+  --network host `
+  -v "${PWD}:/sitespeed.io" `
+  sitespeedio/sitespeed.io `
+  scripts/infoservices-journey.js `
+  --browser chrome -n 1 `
+  --graphite.host localhost `
+  --outputFolder results/latest
 ```
 
 ---
@@ -57,12 +72,5 @@ The pipeline (`.github/workflows/performance-test.yml`) automatically triggers i
 2. **Scheduled Cron**: Runs daily at 02:00 AM UTC.
 3. **Manual Trigger**: Go to **Actions** → **Web Performance Test (sitespeed.io)** → **Run workflow**.
 
----
-
-## 🛠️ One-Time Setup for GitHub Pages (Live Link)
-
-To enable the live website URL for your team:
-1. Open your repository on GitHub.com: `https://github.com/RamuVenkatesan-infosrc/web-performancetest-automation`
-2. Go to **Settings** → **Pages** (in left sidebar).
-3. Under **Build and deployment** → **Source**: Select **GitHub Actions**.
-4. That's it! Every pipeline run will update the live URL automatically!
+### Artifacts & Reports:
+After each run, download the generated HTML report & MP4 videos directly from the **GitHub Actions Run Summary** under **Artifacts**.
