@@ -873,7 +873,7 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<a href=\"$resulturl/$testname/$base.$path.$group.$page.$browser.$connectivity.$screenshottype\">\n<img src=\"$resulturl/$testname/$base.$path.$group.$page.$browser.$connectivity.$screenshottype\"></a>",
+        "content": "<a href=\"$resulturl/$base.$path.$group.$page.$browser.$connectivity.$screenshottype\">\n<img src=\"$resulturl/$base.$path.$group.$page.$browser.$connectivity.$screenshottype\" style=\"width:100%\"></a>",
         "mode": "html"
       },
       "pluginVersion": "10.0.1",
@@ -913,7 +913,8 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<video controls width=\"100%\"src=\"$resulturl/$testname/$base.$path.$group.$page.$browser.$connectivity.mp4\"></video>\n",
+        "content": "<video controls width=\"100%\" src=\"$resulturl/$base.$path.$group.$page.$browser.$connectivity.mp4\"></video>\n",
+
         "mode": "html"
       },
       "pluginVersion": "10.0.1",
@@ -11568,24 +11569,25 @@
         "type": "interval"
       },
       {
-        "hide": 2,
+        "hide": 0,
         "name": "resulturl",
-        "query": "https://changeme.example.org",
+        "query": "http://localhost:8000/results/latest",
         "skipUrlSync": false,
         "type": "constant",
         "current": {
-          "value": "https://changeme.example.org",
-          "text": "https://changeme.example.org",
-          "selected": false
+          "value": "http://localhost:8000/results/latest",
+          "text": "http://localhost:8000/results/latest",
+          "selected": true
         },
         "options": [
           {
-            "value": "https://changeme.example.org",
-            "text": "https://changeme.example.org",
-            "selected": false
+            "value": "http://localhost:8000/results/latest",
+            "text": "http://localhost:8000/results/latest",
+            "selected": true
           }
         ]
       },
+
       {
         "hide": 2,
         "name": "screenshottype",
