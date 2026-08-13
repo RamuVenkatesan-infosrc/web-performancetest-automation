@@ -873,7 +873,7 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<a href=\"http://localhost:8000/results/latest/data/pages/$domain/$page/1/afterPageCompleteCheck.png\">\n<img src=\"http://localhost:8000/results/latest/data/pages/$domain/$page/1/afterPageCompleteCheck.png\" style=\"width:100%\"></a>",
+        "content": "<a href=\"http://localhost:8000/results/latest/pages/$domain/$page/data/screenshots/1/afterPageCompleteCheck.png\">\n<img src=\"http://localhost:8000/results/latest/pages/$domain/$page/data/screenshots/1/afterPageCompleteCheck.png\" style=\"width:100%\"></a>",
         "mode": "html"
       },
       "pluginVersion": "10.0.1",
@@ -913,7 +913,8 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<video controls width=\"100%\" src=\"http://localhost:8000/results/latest/data/pages/$domain/$page/1/images/1.mp4\"></video>\n",
+        "content": "<video controls width=\"100%\" src=\"http://localhost:8000/results/latest/pages/$domain/$page/data/video/1.mp4\"></video>\n",
+
 
 
 
