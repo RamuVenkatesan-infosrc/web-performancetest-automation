@@ -853,67 +853,8 @@
       "title": "Page Vitals",
       "type": "text"
     },
-    {
-      "datasource": {
-        "type": "graphite",
-        "uid": "graphite"
-      },
-      "description": "",
-      "gridPos": {
-        "h": 6,
-        "w": 6,
-        "x": 12,
-        "y": 3
-      },
-      "id": 159,
-      "links": [],
-      "options": {
-        "code": {
-          "language": "plaintext",
-          "showLineNumbers": false,
-          "showMiniMap": false
-        },
-        "content": "<a href=\"http://localhost:8000/results/latest/pages/$domain/$page/data/screenshots/1/afterPageCompleteCheck.png\">\n<img src=\"http://localhost:8000/results/latest/pages/$domain/$page/data/screenshots/1/afterPageCompleteCheck.png\" style=\"width:100%\"></a>",
-        "mode": "html"
-      },
-      "pluginVersion": "10.0.1",
-      "targets": [
-        {
-          "datasource": {
-            "type": "graphite",
-            "uid": "graphite"
-          },
-          "refCount": 0,
-          "refId": "A",
-          "target": "aliasByNode($base.$path.pageSummary.$group.$page.$browser.$connectivity.pagexray.requests, 8)",
-          "textEditor": false
-        }
-      ],
-      "title": "Screenshot from last run",
-      "type": "text"
-    },
-    {
-      "cacheTimeout": "",
-      "datasource": {
-        "type": "graphite",
-        "uid": "graphite"
-      },
-      "description": "",
-      "gridPos": {
-        "h": 6,
-        "w": 6,
-        "x": 18,
-        "y": 3
-      },
-      "id": 160,
-      "links": [],
-      "options": {
-        "code": {
-          "language": "plaintext",
-          "showLineNumbers": false,
-          "showMiniMap": false
-        },
-        "content": "<video controls width=\"100%\" src=\"http://localhost:8000/results/latest/pages/$domain/$page/data/video/1.mp4\"></video>\n",
+
+
 
 
 
