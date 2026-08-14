@@ -8,3 +8,5 @@ sitespeed-result/
 Thumbs.db
 .vscode/
 .idea/
+seed_2week_dummy_data.py
+

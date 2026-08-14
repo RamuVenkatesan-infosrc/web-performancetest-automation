@@ -785,30 +785,6 @@
       "title": "Page Vitals",
       "type": "text"
     },
-
-
-
-
-
-
-        "mode": "html"
-      },
-      "pluginVersion": "10.0.1",
-      "targets": [
-        {
-          "datasource": {
-            "type": "graphite",
-            "uid": "graphite"
-          },
-          "refCount": 0,
-          "refId": "A",
-          "target": "alias($base.$path.pageSummary.$group.$page.$browser.$connectivity.coach.advice.info.domElements, 'DOM elements')",
-          "textEditor": false
-        }
-      ],
-      "title": "Video",
-      "type": "text"
-    },
     {
       "cacheTimeout": "",
       "datasource": {
