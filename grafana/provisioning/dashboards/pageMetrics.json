@@ -749,75 +749,7 @@
       "title": "Page metrics",
       "type": "row"
     },
-    {
-      "datasource": {
-        "type": "marcusolsson-json-datasource",
-        "uid": "json-api"
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 12,
-        "x": 0,
-        "y": 2
-      },
-      "id": 272,
-      "options": {
-        "content": "{{#each data}}\n{{{friendlyHTML}}}\n\n{{#if title}}\n---\n**{{{title}}}**\n\n{{{description}}}\n{{/if}}\n\n{{/each}}",
-        "defaultContent": "The query didn't return any results.",
-        "editor": {
-          "format": "auto",
-          "height": 200,
-          "language": "markdown"
-        },
-        "editors": [],
-        "everyRow": false,
-        "helpers": "",
-        "styles": ""
-      },
-      "targets": [
-        {
-          "cacheDurationSeconds": 300,
-          "datasource": {
-            "type": "marcusolsson-json-datasource",
-            "uid": "json-api"
-          },
-          "experimentalGroupByField": "*",
-          "fields": [
-            {
-              "jsonPath": "description  ",
-              "language": "jsonata",
-              "name": "description"
-            },
-            {
-              "jsonPath": "title",
-              "language": "jsonata",
-              "name": "title"
-            },
-            {
-              "jsonPath": "friendlyHTML",
-              "language": "jsonata",
-              "name": "friendlyHTML"
-            }
-          ],
-          "method": "GET",
-          "queryParams": "",
-          "refId": "A",
-          "urlPath": "/$testname/$base.$path.$group.$page.$browser.$connectivity.json"
-        }
-      ],
-      "title": "Meta data for the test",
-      "transformations": [
-        {
-          "id": "filterByValue",
-          "options": {
-            "filters": [],
-            "match": "all",
-            "type": "exclude"
-          }
-        }
-      ],
-      "type": "marcusolsson-dynamictext-panel"
-    },
+
     {
       "datasource": {
         "type": "graphite",
@@ -825,8 +757,8 @@
       },
       "gridPos": {
         "h": 1,
-        "w": 12,
-        "x": 12,
+        "w": 24,
+        "x": 0,
         "y": 2
       },
       "id": 228,
